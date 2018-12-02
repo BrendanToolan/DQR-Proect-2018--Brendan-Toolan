@@ -1,0 +1,49 @@
+<!-- <mat-toolbar color='primary'>Posts</mat-toolbar> -->
+<!-- <app-post-create></app-post-create>
+<app-post-details></app-post-details> -->
+<!-- <div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/']"><mat-icon>add</mat-icon></a>
+</div> -->
+<mat-toolbar color="primary"> 
+    <mat-toolbar-row>
+            <span class="title-center">
+        Top Music Reviews!
+    </span>
+      </mat-toolbar-row>
+    
+      <mat-toolbar-row>
+
+  <button mat-button [routerLink]="['/create']" color="Warn">Create a review</button>
+  <button mat-button [routerLink]="['/list']">Reviews</button>
+  <button mat-button [routerLink]="['/contact']">Contact Page</button>
+
+</mat-toolbar-row>
+ </mat-toolbar>
+ 
+<h1>The source for all that is music !</h1>
+<p>This is a place where we post up music reviews and let the people add in and contribute there own reviews</p>
+
+<h1>Queens of the Stone Age - Era Vulgaris</h1>
+<img src="assets/qotsa-era.jpg">
+<p>Star Rating: 4/5 stars</p>
+<p>Although some fans see this album as a decline from the previous two albums, Era Vulgaris proves that its worthy to be up there with Queens of the Stone Age's other albums. This album has some of the best qotsa singles including "3's & 7's" and "Make it wit Chu". Recommended for fans of rock music</p>
+<br>
+<h1>Foo Fighters - Concrete and Gold</h1>
+<img src="assets/foofight-gold.jpg">
+<p>Star Rating: 4/5 stars </p>
+<p>The newest album released by the very popular band Foo Fighters was well received by fans when it was released. Although it is not as goood as their previous work, its nonetheless a very good album with many enjoyable songs on it such as "Run" and "The Sky is the Neighbourhood". Very much would recommend this to Fans and people who tend to listen to rock music often </p>
+<br>
+<h1>Tyler, The Creator -Flower Boy</h1>
+<img src="assets/flowerBoy.png">
+<p>Star Rating: 4/5 stars</p>
+<p>Flower Boy will be without a doubt be regraded as one of the best rap albums and some of Tyler, The Creator's best work the rapper has ever done. This album is a perfect for both rap fans and people who not listen to rap as well. With songs such as "Who dat Boi" and "See you again" this album is worth listening to</p>
+
+<!--<button mat-button color="primary" [matMenuTriggerFor]="menu">Posts Menu</button>
+<mat-menu color="primary" #menu="matMenu">
+  <button color="primary" mat-menu-item [routerLink]="['/create']">Create</button>
+  <button color="primary"mat-menu-item [routerLink]="['/']">List</button>
+</mat-menu> -->
+  
+ 
+
+<router-outlet></router-outlet>

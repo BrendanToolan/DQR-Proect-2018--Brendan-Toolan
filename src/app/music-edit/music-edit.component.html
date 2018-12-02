@@ -1,0 +1,54 @@
+<mat-card>
+  <form (submit)="onEditPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <p>Band Name</p>
+      <input
+        matInput
+        type="text"
+        name="name"
+        ngModel={{post.name}}
+        required
+        #name="ngModel"
+        >
+    </mat-form-field>
+    <mat-form-field>
+      <p>Album Names</p>
+      <input
+        matInput
+        type="text"
+        name="album"
+        ngModel={{post.album}}
+        required
+        #album="ngModel"
+        >
+    </mat-form-field>
+    <mat-form-field>
+      <p>Your Review</p>
+      <textarea
+        matInput
+        rows="4"
+        name="content"
+        ngModel={{post.content}}
+        required
+        #content="ngModel">
+      </textarea>
+      <mat-error *ngIf="content.invalid">Please enter a post title.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <p>Star Rating</p>
+        <input
+          matInput
+          type="text"
+          name="stars"
+          ngModel={{post.stars}}
+          required
+          #stars="ngModel"
+          >
+      </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit">Update Post</button>
+  </form>
+</mat-card>

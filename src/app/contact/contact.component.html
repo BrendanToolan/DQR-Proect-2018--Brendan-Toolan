@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">Contact Page</mat-toolbar>
+
+<p>If you any questions or want to get in contact with us please do !</p>
+<mat-card>
+    <form (submit)="onAddPost2(post2Form)" #postForm="ngForm">
+      <mat-form-field>
+        <p>Email</p>
+        <input
+          matInput
+          type="text"
+          name="email"
+          ngModel
+          required
+          minlength="3"
+          #email="ngModel">
+
+      </mat-form-field>
+
+      <mat-form-field>
+          <p>Subject</p>
+          <input
+            matInput
+            type="text"
+            name="subject"
+            ngModel
+            required
+            minlength="3"
+            #subject="ngModel">
+  
+        </mat-form-field>`
+
+        <mat-form-field>
+            <p>Enter description or comment</p>
+            <textarea
+              matInput
+              rows="4"
+              name="comment"
+              ngModel
+              required
+              #comment="ngModel"></textarea>
+          </mat-form-field>
+
+
+      <button
+      mat-raised-button
+      color="accent"
+      type="submit">Save Post</button>

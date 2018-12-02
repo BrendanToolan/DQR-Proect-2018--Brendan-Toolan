@@ -1,0 +1,57 @@
+<mat-card>
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <p>Band Name</p>
+      <input
+        matInput
+        type="text"
+        name="name"
+        ngModel
+        required
+        minlength="3"
+        #name="ngModel">
+      <mat-error *ngIf="name.invalid">Please enter Band/Artist name</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <p>Album Name</p>
+      <input
+        matInput
+        type="text"
+        name="album"
+        ngModel
+        required
+        minlength="3"
+        #album="ngModel">
+      <mat-error *ngIf="album.invalid">Please enter Album name</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <p>Your Review</p>
+      <textarea
+        matInput
+        rows="4"
+        name="content"
+        ngModel
+        required
+        #content="ngModel"></textarea>
+      <mat-error *ngIf="content.invalid">Create your review</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <p>Star Rating</p>
+        <input
+          matInput
+          type="text"
+          name="stars"
+          ngModel
+          required
+          minlength="1"
+          #stars="ngModel">
+        <mat-error *ngIf="stars.invalid">Please enter your rating</mat-error>
+      </mat-form-field>
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit">Save Post</button>
+  </form>
+</mat-card>
